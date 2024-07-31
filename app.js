@@ -14,6 +14,9 @@ app.use(express.json());
 app.use(morgan("tiny"));
 
 // ROUTES
+const placesController = require("./controllers/placesController");
+app.use("/places", placesController);
+
 app.get("/", (req, res) => {
   res.send("Welcome to Trip Planner App");
 });

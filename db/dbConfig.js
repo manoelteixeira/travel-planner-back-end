@@ -14,7 +14,7 @@ db.connect()
   .then((cn) => {
     const { user, host, port, database } = cn.client;
     console.log(
-      `Postgres connection established\nuser:\x1b[33m${user}\n\x1b[0m, host:\x1b[33m${host}\n\x1b[0m,  port:\x1b[33m${port}\n\x1b[0m, database:\x1b[33m${database}\x1b[0m`
+      `Postgres connection establisheduser:\x1b[33m${user}\x1b[0m, host:\x1b[33m${host}\x1b[0m,  port:\x1b[33m${port}\x1b[0m, database:\x1b[33m${database}\x1b[0m`
     );
     cn.done();
   })

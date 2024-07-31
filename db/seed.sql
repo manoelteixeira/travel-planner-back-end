@@ -2,8 +2,8 @@
 \c trip_planner;
 
 INSERT INTO places (name, city, address, description, image) VALUES
-('Colosseum', '
-Rome', 
+('Colosseum', 
+'Rome', 
 'Piazza del Colosseo, 1', 
 'The site of many bloody gladiatorial fights', 
 'https://travel.usnews.com/dims4/USNEWS/2330e6e/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FGettyImages-158762142.jpg'
