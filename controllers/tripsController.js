@@ -2,8 +2,6 @@
 // DEPENDENCIES
 const express = require("express");
 
-const tripsController = express.Router();
-
 // QUERIES
 const {
   getAllTrips,
@@ -21,7 +19,11 @@ const {
   validateImage,
 } = require("../validators/tripsValidator");
 
+const tripsController = express.Router();
+
 // ROUTES
+const tripPlacesController = require("./tripPlacesController");
+tripsController.use("/:trip_id/places", tripPlacesController);
 
 // Index: localhost:4001/trips
 tripsController.get("/", async (req, res) => {
@@ -52,7 +54,6 @@ tripsController.post(
   }
 );
 
-// Show: localhost:4001/places/:id
 tripsController.get("/:id", async (req, res) => {
   const { id } = req.params;
   const trip = await getTripByID(id);

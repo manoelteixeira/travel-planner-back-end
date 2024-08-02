@@ -17,7 +17,7 @@ function validateCity(req, res, next) {
     req.body.city = null;
     next();
   } else if (typeof req.body.city !== "string") {
-    res.status(400).json("city must be a string");
+    res.status(400).json({ error: "city must be a string" });
   } else {
     next();
   }
@@ -28,7 +28,7 @@ function validateDescription(req, res, next) {
     req.body.description = null;
     next();
   } else if (typeof req.body.description !== "string") {
-    res.status(400).json("description must be a string");
+    res.status(400).json({ error: "description must be a string" });
   } else {
     next();
   }
@@ -39,7 +39,7 @@ function validateImage(req, res, next) {
     req.body.image = null;
     next();
   } else if (typeof req.body.image !== "string") {
-    res.status(400).json("image must be a string");
+    res.status(400).json({ error: "image must be a string" });
   } else {
     next();
   }

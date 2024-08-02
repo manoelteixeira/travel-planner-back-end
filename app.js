@@ -18,6 +18,8 @@ const placesController = require("./controllers/placesController");
 app.use("/places", placesController);
 const tripsController = require("./controllers/tripsController");
 app.use("/trips", tripsController);
+// const tripPlacesController = require("./controllers/tripPlacesController");
+// app.use("/details", tripPlacesController);
 
 app.get("/", (req, res) => {
   res.send("Welcome to Trip Planner App");
