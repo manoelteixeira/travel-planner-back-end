@@ -11,7 +11,7 @@ const {
   deletePlace,
   createPlace,
   updatePlace,
-} = require("../questies/placesQueries");
+} = require("../queries/placesQueries");
 
 // VALIDATORS
 const {
@@ -78,7 +78,7 @@ placesController.delete("/:id", async (req, res) => {
   }
 });
 
-// Show: localhost:4001/places/:id
+// Update: localhost:4001/places/:id
 placesController.put(
   "/:id",
   validateName,

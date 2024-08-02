@@ -37,6 +37,6 @@ Back end for travel planner app
 | 10 | `/trips/:id` | PUT | **U**pdate | Update a trip |
 | 11 | `/trips/:id/places` | GET | **R**ead | Get a list of all places for an individual trip |
 | 12 | `/trips/:id/places/:id` | GET | **R**ead | Get an inividual place for an individual trip |
-| 8 | `/trips:id/places` | POST | **C**reate | Add a place to an individual trip |
-| 9 | `/trips/:id/places/:id` | DELETE | **D**elete | Delete a place of an individual trip |
-| 10 | `/trips/:id` | PUT | **U**pdate | Update a place of an individual trip |
+| 13 | `/trips:id/places` | POST | **C**reate | Add a place to an individual trip |
+| 14 | `/trips/:id/places/:id` | DELETE | **D**elete | Delete a place of an individual trip |
+| 15 | `/trips/:id` | PUT | **U**pdate | Update a place of an individual trip |

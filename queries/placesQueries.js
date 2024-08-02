@@ -1,4 +1,4 @@
-// questies/placesQueries.js
+// queries/placesQueries.js
 const db = require("../db/dbConfig.js");
 
 async function getAllPlaces() {

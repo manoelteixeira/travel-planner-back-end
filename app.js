@@ -16,6 +16,8 @@ app.use(morgan("tiny"));
 // ROUTES
 const placesController = require("./controllers/placesController");
 app.use("/places", placesController);
+const tripsController = require("./controllers/tripsController");
+app.use("/trips", tripsController);
 
 app.get("/", (req, res) => {
   res.send("Welcome to Trip Planner App");
