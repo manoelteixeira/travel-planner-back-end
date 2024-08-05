@@ -14,7 +14,8 @@ CREATE TABLE places (
     city VARCHAR(50) NOT NULL,
     address TEXT NOT NULL,
     description TEXT NOT NULL,
-    image TEXT NOT NULL
+    image TEXT NOT NULL,
+    UNIQUE (name, address, city)
 );
 
 CREATE TABLE trips (

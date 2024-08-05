@@ -46,6 +46,8 @@ placesController.post(
     const place = await createPlace(req.body);
     if (place.id) {
       res.status(201).json(place);
+    } else if (place.detail.includes("already exists")) {
+      res.status(500).json({ error: "Place already exists." });
     } else {
       res.status(500).json({ error: "Internal Server Error." });
     }
@@ -93,6 +95,8 @@ placesController.put(
       res.status(200).json(place);
     } else if (place.received == 0) {
       res.status(404).json({ error: "Place Not Found." });
+    } else if (place.detail.includes("already exists")) {
+      res.status(500).json({ error: "Place already exists." });
     } else {
       res.status(500).json({ error: "Internal Server Error." });
     }
