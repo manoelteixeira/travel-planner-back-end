@@ -45,7 +45,6 @@ tripsController.post(
   validateImage,
   async (req, res) => {
     const trip = await createTrip(req.body);
-    console.log(trip);
     if (trip.id) {
       res.status(201).json(trip);
     } else {
@@ -57,7 +56,6 @@ tripsController.post(
 tripsController.get("/:id", async (req, res) => {
   const { id } = req.params;
   const trip = await getTripByID(id);
-  console.log(trip);
   if (trip.id) {
     res.status(200).json(trip);
   } else if (trip.received == 0) {
@@ -91,7 +89,6 @@ tripsController.put(
 tripsController.delete("/:id", async (req, res) => {
   const { id } = req.params;
   const trip = await deleteTrip(id);
-  console.log(trip);
   if (trip.id) {
     res.status(200).json(trip);
   } else if (trip.received == 0) {

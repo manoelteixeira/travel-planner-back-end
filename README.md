@@ -1,6 +1,6 @@
 # travel-planner-back-end
 
-Back end for travel planner app
+Back end for [travel planner](https://github.com/manoelteixeira/travel-planner-front-end) app
 
 ## Instalation And Setup
 
@@ -40,3 +40,9 @@ Back end for travel planner app
 | 13 | `/trips:id/places` | POST | **C**reate | Add a place to an individual trip |
 | 14 | `/trips/:id/places/:id` | DELETE | **D**elete | Delete a place of an individual trip |
 | 15 | `/trips/:id` | PUT | **U**pdate | Update a place of an individual trip |
+
+> Endpoints can be tested [here](https://travel-planner-back-end-otif.onrender.com)
+
+## Database ERD
+
+![Database ERD](./assets/ERD.png)

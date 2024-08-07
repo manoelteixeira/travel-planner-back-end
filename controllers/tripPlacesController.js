@@ -62,7 +62,6 @@ tripPlacesController.post(
         ...req.body,
         trip_id: trip_id,
       });
-      console.log(tripPlace);
       if (tripPlace.id) {
         res.status(201).json(tripPlace);
       } else {
@@ -92,7 +91,7 @@ tripPlacesController.get("/:id", async (req, res) => {
   }
 });
 
-// Update: localhost:4001/places/:id/:trip_id/places/:id
+// Update: localhost:4001/trips/:trip_id/places/:id
 tripPlacesController.put(
   "/:id",
   validateIsFavorite,
